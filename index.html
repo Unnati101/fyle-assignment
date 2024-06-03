@@ -1,0 +1,305 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="landing page" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="hero">
+        <div id="hero-text">
+            <p id="hero-text-1">AWARD WINNING</p>
+            <p id="hero-text-2" style="font-weight:600;font-size:30;">DIGITAL
+                MARKETING</br>AGENCY</p>
+            <p id="hero-text-3" style="font-size:8px">Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                pellentesque </br> vitae
+                ante at elit fringilla ac at purus, Morbi sed lacus nec risus finibus</br> feugiat et fermentum</p>
+            <script>
+
+                function togglePopup() {
+                    const overlay = document.getElementById('popupOverlay');
+                    overlay.classList.toggle('show');
+                }
+
+
+
+                $(window).click(function (e) {
+                    if (e.target.className === 'overlay-container show') {
+                        togglePopup()
+                    }
+                })
+
+            </script>
+            <button id="hero-button" style="cursor:pointer" onclick="togglePopup()">CONTACT US</button>
+            <div id="popupOverlay" class="overlay-container">
+                <div class="popup-box">
+                    <h2 style="text-align:left; font-size:20px">Talk to us</h2>
+                    <form action="https://getform.io/f/lbkmjvvb" method="post" class="form-container">
+
+
+
+                        <input class="form-input" type="email" placeholder="Work email" id="email" name="email"
+                            required>
+
+                        <div style="display:flex">
+
+                            <input class="form-input" type="text" placeholder="First name" id="fname" name="fname"
+                                required>
+
+                            <input class="form-input" type="text" placeholder="Last name" id="lname" name="lname"
+                                required>
+                        </div>
+
+                        <div style="display:flex;font-size:10px">
+                            <input type="checkbox" id="tc" name="tc" value="yes">
+                            <div style="margin-top:15px">I agree to Fyle's
+                                terms and conditions
+                                and
+                                provide</br> document to send me communication</div>
+                        </div>
+                        <button class="btn-submit" type="submit">
+                            Contact Us
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <img id="hero-img" src="assets\hero.png">
+    </div>
+    <div class="about">
+        <div id="about-text">
+            <p id="about-text-1">WHAT WE DO</p>
+            <div id="about-text-2">
+                <p id="about-text-2-1">SERVICES PROVIDE</br>FOR YOU</p>
+                <p id="about-text-2-2" style="font-size:8px">Morbi sed lacus nec risus finibus feugiat et fermentum
+                    nibh.
+                    pellentesque </br> vitae
+                    ante at elit fringilla ac at purus, Morbi sed lacus nec risus finibus</br> feugiat et fermentum</p>
+            </div>
+
+            <body>
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+
+                        <img src="assets/1-2.png" style="width:20%">
+                        <img src="assets/2-2.png" style="width:20%">
+                        <img src="assets/3-2.png" style="width:20%">
+                        <img src="assets/3-2.png" style="width:20%">
+
+                    </div>
+
+                    <div class="mySlides fade">
+
+                        <img src="assets/1-2.png" style="width:20%">
+                        <img src="assets/3-2.png" style="width:20%">
+                        <img src="assets/3-2.png" style="width:20%">
+                        <img src="assets/2-2.png" style="width:20%">
+
+                    </div>
+
+                    <div class="mySlides fade">
+
+                        <img src="assets/2-2.png" style="width:20%">
+                        <img src="assets/3-2.png" style="width:20%">
+                        <img src="assets/1-2.png" style="width:20%">
+                        <img src="assets/3-2.png" style="width:20%">
+
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)"></a>
+                    <a class="next" onclick="plusSlides(1)"></a>
+
+                </div>
+                <br>
+                <div style="text-align:left">
+                    <img class="dot" style="width:10px; cursor:pointer" src="assets/3.svg" onclick="currentSlide(1)">
+                    <img class="dot" style="width:10px;cursor:pointer" src="assets/3.svg" onclick="currentSlide(2)">
+                    <img class="dot" style="width:10px;cursor:pointer" src="assets/3.svg" onclick="currentSlide(3)">
+
+                </div>
+
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) {
+                            slideIndex = 1
+                            dots[0].src = "assets/1.svg";
+                        }
+                        if (n < 1) { slideIndex = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            if (i == n - 1) {
+                                dots[i].src = "assets/1.svg";
+                            }
+                            else {
+                                dots[i].src = "assets/3.svg";
+                            }
+
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+
+                    }
+                </script>
+
+        </div>
+    </div>
+    <div class="why-us" style="text-align: center">
+        <p id="why-text-1" style="color:#FF3147">WHY CHOOSE US</p>
+        <p id="why-text-2" style="font-weight:600;font-size:25px">WHY WE ARE BEST</p>
+        <div id="why-content" style="display:flex; margin-left:100px">
+            <div id="why-container">
+                <img style="width:30%" src="assets\1-1.svg">
+                <h5 style="font-weight:400">Clarified Vision & Target</h5>
+                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet </br>consectetur adipisicing elit. </br>Error
+                    quod
+                    placeat</p>
+            </div>
+            <div id="why-container">
+                <img style="width:40%" src="assets\2-1.svg">
+                <h5 style="font-weight:400">High Performance</h5>
+                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet </br>consectetur adipisicing elit. </br>Error
+                    quod
+                    placeat</p>
+            </div>
+            <div id="why-container">
+                <img style="width:35%" src="assets\3-1.svg">
+                <h5 style="font-weight:400">Maintain Security</h5>
+                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet </br>consectetur adipisicing elit. </br>Error
+                    quod
+                    placeat</p>
+            </div>
+            <div id="why-container">
+                <img style="width:30%" src="assets\4.svg">
+                <h5 style="font-weight:400">Better Strategy & Quality</h5>
+                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet </br>consectetur adipisicing elit. </br>Error
+                    quod
+                    placeat</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="why-us" style="text-align: center">
+        <p id="why-text-1" style="color:#FF3147">OUR PROJECT</p>
+        <p id="why-text-2" style="font-weight:600;font-size:25px">WHY WE ARE BEST</p>
+    </div>
+
+
+    <div style="display: flex">
+        <img id="myImage" style="width:50%;height:50%;margin-left:120px" src="assets\image.png">
+        <script>
+            function img1() {
+                document.getElementById('myImage')
+                    .src = "assets/image.png";
+            }
+
+            function img2() {
+                document.getElementById('myImage')
+                    .src = "assets/image2.png";
+            }
+
+            function img3() {
+                document.getElementById('myImage')
+                    .src = "assets/image3.png";
+            }
+        </script>
+        <div class="button" style="padding-left:20px">
+            <button id="why-btn" style="border-width:0px; text-align:left; padding:14px; font-size:12px"
+                onclick=img1();>
+                <h4>Genderless Kei - Japan's Hot</h4>
+                Set to launch on the manufacturer's </br> new A330neo aircraft in 2017, it's</br>offering lots of
+            </button>
+            </br>
+            <button id="why-btn" style="border-width:0px; text-align:left; padding:14px; font-size:12px"
+                onclick=img2();>
+                <h4>Better Strategy & Quality</h4>
+                Set to launch on the manufacturer's </br> new A330neo aircraft in 2017, it's</br>offering lots of
+            </button>
+            </br>
+            <button id="why-btn" style="border-width:0px; text-align:left; padding:14px; font-size:12px"
+                onclick=img3();>
+                <h4>Genderless Kei - Japan's Hot</h4>
+                Set to launch on the manufacturer's </br> new A330neo aircraft in 2017, it's</br>offering lots of
+            </button>
+        </div>
+
+    </div>
+
+    <div class="our-gr" style="text-align: center; padding-top:30px">
+        <p id="why-text-1" style="color:#FF3147">EXPERTS GROWTH</p>
+        <p id="hero-text-2" style="font-weight:600;font-size:25px">OUR COMPANY GROWTH</p>
+        <div id="our-content" style="display:flex; margin-left:150px">
+            <div id="our-container">
+                <img style="width:20%" src="assets\heart (2).svg">
+                <p style="font-weight:300;font-size:30px">199+</p>
+                <p style="font-size: 10px;">Satisfied Customers</p>
+            </div>
+            <div id="our-container">
+                <img style="width:20%" src="assets\clock (3).svg">
+                <p style="font-weight:300;font-size:30px">1591+</p>
+                <p style="font-size: 10px;">Days Of Operation</p>
+            </div>
+            <div id="our-container">
+                <img style="width:25%" src="assets\Path 4402.svg">
+                <p style="font-weight:300;font-size:30px">283+</p>
+                <p style="font-size: 10px;">Complete Project</p>
+            </div>
+            <div id="our-container">
+                <img style="width:40%" src="assets\Path 4406.svg">
+                <p style="font-weight:300;font-size:30px">75+</p>
+                <p style="font-size: 10px;">Win Awards</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cl" style="text-align: center; padding:40px">
+        <p id="cl-text-1" style="color:#FF3147;font-size:15px">CLIENT'S FEEDBACK</p>
+        <p id="cl-text-2" style="font-weight:600;font-size:25px;margin: auto;">PEOPLE SAY'S ABOUT US !</p>
+        <p style="text-align: left;margin-left:250px; font-size:10px">Jannat Tumpa The standard chunk of lorem ipsum
+            used sinch the
+            1500s is
+            </br>
+            reproduced below for those
+            interested. Sections Bonorum et malarum original. </br></br> <span style="color:#FF3147;font-weight:700">
+                JANNAT
+                TUMPA
+                <span style="color:#808080;font-weight:300">- COO, AMERMAR ENTERPRISE, INC</span></span></p>
+    </div>
+    <div class="footer" style="background-color:#FF3147; ">
+        <img src="assets\Group 500.png" style="width:70%; margin-left:100px; padding:60px">
+    </div>
+
+</body>
+
+</html>
